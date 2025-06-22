@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us | SyntaxError Solutions</title>
+  <link rel="stylesheet" href="/Portfolio-main/SyntaxError/client/css/theme.css">
+</head>
+<body data-mode="light">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="main.html" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="join-us.html" class="nav-link btn-quote active">Join Us</a></li>
+      </ul>
+      <!-- <div class="theme-toggle-fixed">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </div> -->
+      <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container mt-120 join-us-section">
+    <div class="section-header">
+      <h2 class="section-title">Join Us</h2>
+      <p class="section-subtitle">Become a part of the SyntaxError Solutions team! Fill out the form below to apply.</p>
+    </div>
+    <form class="contact-form" style="max-width:600px;margin:0 auto;">
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="firstName" name="firstName" required />
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastName" name="lastName" required />
+          <label for="lastName">Last Name</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" required />
+        <label for="email">Email</label>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" required />
+        <label for="phone">Phone Number</label>
+      </div>
+      <div class="form-group">
+        <select id="role" name="role" required>
+          <option value="">Select Role</option>
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="fullstack">Full Stack Developer</option>
+          <option value="designer">UI/UX Designer</option>
+          <option value="devops">DevOps Engineer</option>
+          <option value="intern">Intern</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="role">Role Applying For</label>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Why do you want to join us?</label>
+      </div>
+      <div class="form-group">
+        <input type="url" id="portfolio" name="portfolio" />
+        <label for="portfolio">Portfolio/LinkedIn/GitHub URL (optional)</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">
+        <i class="fas fa-paper-plane"></i> Submit Application
+      </button>
+    </form>
+  </section>
+
+        <!-- Footer -->
+        <footer class="footer mt-120">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="logos-text">
+                            <span class="logo-text">Syntax
+                                <span class="logo-accent">Error</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="footer-para">
+                        <div>
+                            <p>
+                            Transforming ideas into exceptional digital
+                            experiences
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2023 SyntaxError Solutions. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+  <script src="../js/theme.js"></script>
+</body>
+</html>
