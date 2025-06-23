@@ -116,5 +116,60 @@
             </div>
         </footer>
   <script src="/Portfolio-main/SyntaxError/client/js/theme.js"></script>
+        <!-- for chat us -->
+
+    <button id="chat-us-btn" aria-label="Chat with us">
+      <i class="fas fa-comments"></i>
+    </button>
+  <script>
+      // Chat Us Button Styles and Behavior
+      (function() {
+        var btn = document.createElement('style');
+        btn.innerHTML = `
+          #chat-us-btn {
+            position: fixed;
+            right: 32px;
+            bottom: 32px;
+            z-index: 1200;
+            background: linear-gradient(75deg, #764ba2, #667eea);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 0.9rem 2rem 0.9rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+          }
+          #chat-us-btn:hover {
+            background: linear-gradient(75deg, #9ea9d8, #b18fd4);
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+          }
+          #chat-us-btn i {
+            font-size: 1.3rem;
+          }
+          @media (max-width: 600px) {
+            #chat-us-btn {
+              right: 12px;
+              bottom: 12px;
+              padding: 0.7rem 1.2rem 0.7rem 1rem;
+              font-size: 1rem;
+            }
+          }
+        `;
+        document.head.appendChild(btn);
+        var chatBtn = document.getElementById('chat-us-btn');
+        if (chatBtn) {
+          chatBtn.addEventListener('click', function() {
+            alert('Chat feature coming soon!');
+          });
+        }
+      })();
+      </script>
 </body>
 </html>

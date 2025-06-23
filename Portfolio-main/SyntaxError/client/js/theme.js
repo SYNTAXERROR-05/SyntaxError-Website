@@ -74,10 +74,10 @@ function initHeroAnimations() {
         const heroContent = document.querySelector('.hero-content');
         const heroVisual = document.querySelector('.hero-visual');
         if (heroContent) {
-            heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+            heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
         }
         if (heroVisual) {
-            heroVisual.style.transform = `translateY(${scrolled * 0.2}px)`;
+            heroVisual.style.transform = `translateY(${scrolled * 0.1}px)`;
         }
     });
 }
