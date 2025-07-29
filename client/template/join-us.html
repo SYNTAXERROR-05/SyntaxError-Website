@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join Us | SyntaxError Solutions</title>
-  <link rel="stylesheet" href="/Portfolio-main/SyntaxError/client/css/theme.css">
-      <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    />
+  <link rel="stylesheet" href="/client/css/theme.css">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <script src="/client/js/theme.js" defer></script>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body data-mode="light">
   <nav class="navbar">
     <div class="nav-container">
@@ -34,12 +34,12 @@
         <li><a href="main.html#contact" class="nav-link">Contact</a></li>
         <li><a href="join-us.html" class="nav-link btn-quote active">Join Us</a></li>
       </ul>
-      <!-- <div class="theme-toggle-fixed">
+      <div class="theme-toggle-fixed">
         <button id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-sun sun-icon"></i>
           <i class="fas fa-moon moon-icon"></i>
         </button>
-      </div> -->
+      </div>
       <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
         <span></span>
         <span></span>
@@ -99,47 +99,46 @@
     </form>
   </section>
 
-        <!-- Footer -->
-        <footer class="footer mt-120">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="logos-text">
-                            <span class="logo-text">Syntax
-                                <span class="logo-accent">Error</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="footer-para">
-                        <div>
-                            <p>
-                            Transforming ideas into exceptional digital
-                            experiences
-                        </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>
-                        &copy; 2023 SyntaxError Solutions. All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </footer>
-  <script src="/Portfolio-main/SyntaxError/client/js/theme.js"></script>
-        <!-- for chat us -->
+  <!-- Footer -->
+  <footer class="footer mt-120">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="logos-text">
+            <span class="logo-text">Syntax
+              <span class="logo-accent">Error</span>
+            </span>
+          </div>
+        </div>
+        <div class="footer-para">
+          <div>
+            <p>
+              Transforming ideas into exceptional digital
+              experiences
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2023 SyntaxError Solutions. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- for chat us -->
 
-    <button id="chat-us-btn" aria-label="Chat with us">
-      <i class="fas fa-comments"></i>
-    </button>
+  <button id="chat-us-btn" aria-label="Chat with us">
+    <i class="fas fa-comments"></i>
+  </button>
   <script>
-      // Chat Us Button Styles and Behavior
-      (function() {
-        var btn = document.createElement('style');
-        btn.innerHTML = `
+    // Chat Us Button Styles and Behavior
+    (function () {
+      var btn = document.createElement('style');
+      btn.innerHTML = `
           #chat-us-btn {
             position: fixed;
             right: 32px;
@@ -176,14 +175,15 @@
             }
           }
         `;
-        document.head.appendChild(btn);
-        var chatBtn = document.getElementById('chat-us-btn');
-        if (chatBtn) {
-          chatBtn.addEventListener('click', function() {
-            alert('Chat feature coming soon!');
-          });
-        }
-      })();
-      </script>
+      document.head.appendChild(btn);
+      var chatBtn = document.getElementById('chat-us-btn');
+      if (chatBtn) {
+        chatBtn.addEventListener('click', function () {
+          alert('Chat feature coming soon!');
+        });
+      }
+    })();
+  </script>
 </body>
+
 </html>
