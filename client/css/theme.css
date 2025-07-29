@@ -859,6 +859,7 @@ section {
 .portfolio-info {
   text-align: center;
   color: white;
+  padding: 1rem;;
 }
 
 .portfolio-info h4 {
