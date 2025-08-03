@@ -27,6 +27,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/theme.css" />
 
@@ -579,16 +582,16 @@
                             title="Meerut Location Map"></iframe>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://github.com/SYNTAXERROR-05" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/syntax-error%F0%9F%90%9E%F0%9F%90%9E-002772369/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a href="#" class="social-link"><i class="fab fa-discord"></i></a> -->
+                        <a href="https://x.com/SyntaxAdda" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/syntax.error.official_05" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#" class="social-link"><i class="fab fa-facebook"></i></a> -->
+                        <!-- <a href="#" class="social-link"><i class="fab fa-telegram"></i></a> -->
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" id="firstName" name="firstName" required />
@@ -638,8 +641,8 @@
                         <textarea id="message" name="message" rows="10" required></textarea>
                         <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>Send Message
+                    <button type="submit" class="btn btn-primary" id="submitContactBtn">
+                        <i class="fas fa-paper-plane"></i><span id="contactBtnText">Send Message</span>
                     </button>
                 </form>
             </div>
@@ -732,6 +735,136 @@
                 });
             }
         })();
+    </script>
+
+    <script>
+        // EmailJS Configuration for Contact Form
+        (function() {
+            emailjs.init("9xCXTsa_h1OoH3Ybx");
+        })();
+
+        // Contact Form Handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submitContactBtn');
+                    const btnText = document.getElementById('contactBtnText');
+                    
+                    if (!submitBtn || !btnText) {
+                        alert('Form elements not found. Please refresh the page.');
+                        return;
+                    }
+                    
+                    // Disable form to prevent multiple submissions
+                    //submitBtn.disabled = true;
+                    //btnText.innerHTML = ' Sending...';
+                    
+                    // Collect form data
+                    const formData = {
+                        firstName: document.getElementById('firstName').value.trim(),
+                        lastName: document.getElementById('lastName').value.trim() || 'Not provided',
+                        email: document.getElementById('email').value.trim(),
+                        phone: document.getElementById('phone').value.trim(),
+                        service: document.getElementById('service').value,
+                        message: document.getElementById('message').value.trim(),
+                        submissionDate: new Date().toLocaleString(),
+                        fullName: document.getElementById('firstName').value.trim() + ' ' + (document.getElementById('lastName').value.trim() || ''),
+                        priority: getPriority(document.getElementById('service').value),
+                        leadType: getLeadType(document.getElementById('service').value)
+                    };
+                    
+                    // Validate required fields
+                    if (!formData.firstName || !formData.email || !formData.phone || !formData.service || !formData.message) {
+                        resetContactButton();
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    // Validate email format
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(formData.email)) {
+                        resetContactButton();
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    console.log('Sending contact form data:', formData);
+                    
+                    // Function to reset button state
+                    function resetContactButton() {
+                        submitBtn.disabled = false;
+                        btnText.innerHTML = ' Send Message';
+                        submitBtn.style.background = '';
+                    }
+                    
+                    // Send email using EmailJS
+                    emailjs.send('service_q509l0l', 'template_32eigxj', formData)
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            
+                            // Show success message
+                            btnText.innerHTML = ' ✅ Message Sent!';
+                            submitBtn.style.background = '#28a745';
+                            
+                            // Reset form and button after delay
+                            setTimeout(() => {
+                                contactForm.reset();
+                                resetContactButton();
+                                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
+                            }, 2000);
+                            
+                        })
+                        .catch(function(error) {
+                            console.log('FAILED...', error);
+                            console.log('Error status:', error.status);
+                            console.log('Error text:', error.text);
+                            console.log('Full error object:', error);
+                            
+                            // Show error message
+                            btnText.innerHTML = ' ❌ Failed to Send';
+                            submitBtn.style.background = '#dc3545';
+                            
+                            // Reset button after delay
+                            setTimeout(() => {
+                                resetContactButton();
+                                let errorMsg = 'Sorry, there was an error sending your message. ';
+                                if (error.status === 422) {
+                                    errorMsg += 'Template configuration issue detected.';
+                                } else if (error.status === 400) {
+                                    errorMsg += 'Service configuration issue detected.';
+                                } else {
+                                    errorMsg += 'Please try again or contact us directly.';
+                                }
+                                alert(errorMsg);
+                            }, 3000);
+                        });
+                });
+            }
+        });
+
+        // Helper function to determine priority based on service
+        function getPriority(service) {
+            const highPriorityServices = ['ecommerce', 'consulting', 'backend-solutions'];
+            return highPriorityServices.includes(service) ? 'High' : 'Normal';
+        }
+
+        // Helper function to determine lead type based on service
+        function getLeadType(service) {
+            const leadTypes = {
+                'web-development': 'Web Development Lead',
+                'mobile-development': 'Mobile App Lead',
+                'ui-ux-design': 'Design Lead',
+                'backend-solutions': 'Technical Lead',
+                'ecommerce': 'E-commerce Lead',
+                'consulting': 'Business Lead',
+                'others': 'General Inquiry'
+            };
+            return leadTypes[service] || 'General Lead';
+        }
     </script>
 </body>
 
