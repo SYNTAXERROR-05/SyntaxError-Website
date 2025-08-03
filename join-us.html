@@ -15,7 +15,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
+
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
@@ -192,22 +192,22 @@
     })();
 
     // EmailJS Configuration
-    (function() {
+    (function () {
       emailjs.init("9xCXTsa_h1OoH3Ybx");
     })();
 
     // Form submission handler
-    document.getElementById('joinUsForm').addEventListener('submit', function(event) {
+    document.getElementById('joinUsForm').addEventListener('submit', function (event) {
       event.preventDefault();
-      
+
       const submitBtn = document.getElementById('submitBtn');
       const btnText = document.getElementById('btnText');
       const originalText = btnText.textContent;
-      
+
       // Show loading state
-     // btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-     // submitBtn.disabled = true;
-      
+      // btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      // submitBtn.disabled = true;
+
       // Collect form data
       const formData = {
         firstName: document.getElementById('firstName').value,
@@ -221,16 +221,16 @@
         submissionDate: new Date().toLocaleString(),
         fullName: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value
       };
-      
+
       // Send email using EmailJS
       emailjs.send('service_tzz6e9j', 'template_oifvvoo', formData)
-        .then(function(response) {
+        .then(function (response) {
           console.log('SUCCESS!', response.status, response.text);
-          
+
           // Show success message
           btnText.innerHTML = '<i class="fas fa-check"></i> Application Sent!';
           submitBtn.style.background = '#28a745';
-          
+
           // Reset form after delay
           setTimeout(() => {
             document.getElementById('joinUsForm').reset();
@@ -239,20 +239,20 @@
             submitBtn.style.background = '';
             alert('Thank you! Your application has been submitted successfully. We will contact you soon.');
           }, 2000);
-          
-        }, function(error) {
+
+        }, function (error) {
           console.log('FAILED...', error);
-          
+
           // Show error message
           btnText.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
           submitBtn.style.background = '#dc3545';
-          
+
           setTimeout(() => {
             btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
             submitBtn.disabled = false;
             submitBtn.style.background = '';
           }, 3000);
-          
+
           alert('Sorry, there was an error sending your application. Please try again.');
         });
     });

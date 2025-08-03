@@ -436,8 +436,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="images/ecomm.gif"
-                            alt="E-commerce Dashboard" class="portfolio-img" />
+                        <img src="images/ecomm.gif" alt="E-commerce Dashboard" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>E-commerce Dashboard</h4>
@@ -452,8 +451,7 @@
                 </div>
                 <div class="portfolio-item" data-category="mobile">
                     <div class="portfolio-image">
-                        <img src="images/mbank.jpg"
-                            alt="Mobile Banking App" class="portfolio-img" />
+                        <img src="images/mbank.jpg" alt="Mobile Banking App" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>Mobile Banking App</h4>
@@ -468,8 +466,7 @@
                 </div>
                 <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="images/analydash.png"
-                            alt="Analytics Dashboard" class="portfolio-img" />
+                        <img src="images/analydash.png" alt="Analytics Dashboard" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>Analytics Dashboard</h4>
@@ -484,8 +481,7 @@
                 </div>
                 <div class="portfolio-item" data-category="ecommerce">
                     <div class="portfolio-image">
-                        <img src="images/fashion.png"
-                            alt="Fashion E-store" class="portfolio-img" />
+                        <img src="images/fashion.png" alt="Fashion E-store" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>Fashion E-store</h4>
@@ -500,8 +496,7 @@
                 </div>
                 <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="images/LMS.jpg"
-                            alt="Learning Management System" class="portfolio-img" />
+                        <img src="images/LMS.jpg" alt="Learning Management System" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>Learning Management System</h4>
@@ -516,8 +511,7 @@
                 </div>
                 <div class="portfolio-item" data-category="mobile">
                     <div class="portfolio-image">
-                        <img src="images/healthcare.png"
-                            alt="HealthCare" class="portfolio-img" />
+                        <img src="images/healthcare.png" alt="HealthCare" class="portfolio-img" />
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>HealthCare</h4>
@@ -559,13 +553,13 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 8534892350</p>
-                                <p>+91 9759570559</p>
-                            </div>
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 8534892350</p>
+                            <p>+91 9759570559</p>
                         </div>
+                    </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
@@ -582,11 +576,14 @@
                             title="Meerut Location Map"></iframe>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/SYNTAXERROR-05" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/syntax-error%F0%9F%90%9E%F0%9F%90%9E-002772369/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/SYNTAXERROR-05" class="social-link"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/syntax-error%F0%9F%90%9E%F0%9F%90%9E-002772369/"
+                            class="social-link"><i class="fab fa-linkedin"></i></a>
                         <!-- <a href="#" class="social-link"><i class="fab fa-discord"></i></a> -->
                         <a href="https://x.com/SyntaxAdda" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/syntax.error.official_05" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/syntax.error.official_05" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
                         <!-- <a href="#" class="social-link"><i class="fab fa-facebook"></i></a> -->
                         <!-- <a href="#" class="social-link"><i class="fab fa-telegram"></i></a> -->
                     </div>
@@ -739,30 +736,30 @@
 
     <script>
         // EmailJS Configuration for Contact Form
-        (function() {
+        (function () {
             emailjs.init("9xCXTsa_h1OoH3Ybx");
         })();
 
         // Contact Form Handler
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const contactForm = document.getElementById('contactForm');
-            
+
             if (contactForm) {
-                contactForm.addEventListener('submit', function(event) {
+                contactForm.addEventListener('submit', function (event) {
                     event.preventDefault();
-                    
+
                     const submitBtn = document.getElementById('submitContactBtn');
                     const btnText = document.getElementById('contactBtnText');
-                    
+
                     if (!submitBtn || !btnText) {
                         alert('Form elements not found. Please refresh the page.');
                         return;
                     }
-                    
+
                     // Disable form to prevent multiple submissions
                     //submitBtn.disabled = true;
                     //btnText.innerHTML = ' Sending...';
-                    
+
                     // Collect form data
                     const formData = {
                         firstName: document.getElementById('firstName').value.trim(),
@@ -776,14 +773,14 @@
                         priority: getPriority(document.getElementById('service').value),
                         leadType: getLeadType(document.getElementById('service').value)
                     };
-                    
+
                     // Validate required fields
                     if (!formData.firstName || !formData.email || !formData.phone || !formData.service || !formData.message) {
                         resetContactButton();
                         alert('Please fill in all required fields.');
                         return;
                     }
-                    
+
                     // Validate email format
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(formData.email)) {
@@ -791,43 +788,43 @@
                         alert('Please enter a valid email address.');
                         return;
                     }
-                    
+
                     console.log('Sending contact form data:', formData);
-                    
+
                     // Function to reset button state
                     function resetContactButton() {
                         submitBtn.disabled = false;
                         btnText.innerHTML = ' Send Message';
                         submitBtn.style.background = '';
                     }
-                    
+
                     // Send email using EmailJS
                     emailjs.send('service_q509l0l', 'template_32eigxj', formData)
-                        .then(function(response) {
+                        .then(function (response) {
                             console.log('SUCCESS!', response.status, response.text);
-                            
+
                             // Show success message
                             btnText.innerHTML = ' ✅ Message Sent!';
                             submitBtn.style.background = '#28a745';
-                            
+
                             // Reset form and button after delay
                             setTimeout(() => {
                                 contactForm.reset();
                                 resetContactButton();
                                 alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
                             }, 2000);
-                            
+
                         })
-                        .catch(function(error) {
+                        .catch(function (error) {
                             console.log('FAILED...', error);
                             console.log('Error status:', error.status);
                             console.log('Error text:', error.text);
                             console.log('Full error object:', error);
-                            
+
                             // Show error message
                             btnText.innerHTML = ' ❌ Failed to Send';
                             submitBtn.style.background = '#dc3545';
-                            
+
                             // Reset button after delay
                             setTimeout(() => {
                                 resetContactButton();
