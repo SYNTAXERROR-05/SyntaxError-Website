@@ -6,50 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>More Projects | SyntaxError Portfolio</title>
   <link rel="stylesheet" href="css/theme.css">
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <script src="js/theme.js" defer></script>
 </head>
 
 <body data-mode="light">
-  <!-- Navigation -->
+
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <div class="logo-icon">
-          <i class="fas fa-code"> </> </i>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="main.html#home" class="nav-link">Home</a></li>
-        <li><a href="main.html#about" class="nav-link">About</a></li>
-        <li><a href="main.html#services" class="nav-link">Services</a></li>
-        <li><a href="main.html#portfolio" class="nav-link">Projects</a></li>
-        <li><a href="main.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="join-us.html" class="nav-link btn-quote">Join Us</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- <div class="theme-toggle-fixed">
-          <button id="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-sun sun-icon"></i>
-            <i class="fas fa-moon moon-icon"></i>
-          </button>
-        </div> -->
-    <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="join-us.html" class="nav-link btn-quote">Join Us</a></li>
+        </ul>
+        <div class="theme-toggle-fixed">
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </button>
+        </div>
     </div>
   </nav>
 
@@ -59,7 +53,6 @@
       <p class="section-subtitle">Explore additional projects and case studies.</p>
     </div>
     <div class="portfolio-grid">
-      <!-- Add more project items below -->
       <div class="portfolio-item">
         <img src="images/analydash.png" alt="Analytics Dashboard" class="portfolio-img">
         <div class="portfolio-overlay">
@@ -81,8 +74,8 @@
             <h4>DevDishes</h4>
             <p>Modern recipe discovery app with glassmorphism design and smart search capabilities.</p>
             <div class="portfolio-links">
-              <a href="https://tyagigolu02.github.io/DevDishes/" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/tyagigolu02/DevDishes" class="portfolio-link" title="Source Code">💻</a>
+              <a href="https://tyagigolu02.github.io/DevDishes/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/tyagigolu02/DevDishes" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
@@ -95,9 +88,8 @@
             <h4>Animal's History</h4>
             <p>Educational wildlife conservation website featuring endangered species information.</p>
             <div class="portfolio-links">
-              <a href="https://tyagigolu02.github.io/Animal-s-History/" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/tyagigolu02/Animal-s-History" class="portfolio-link"
-                title="Source Code">💻</a>
+              <a href="https://tyagigolu02.github.io/Animal-s-History/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/tyagigolu02/Animal-s-History" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
@@ -124,9 +116,8 @@
             <h4>Sankalap Sewa Foundation</h4>
             <p>NGO website for animal welfare and rescue operations with donation system.</p>
             <div class="portfolio-links">
-              <a href="https://ngo-website-production-ee78.up.railway.app/" class="portfolio-link"
-                title="View Demo">🔗</a>
-              <a href="https://github.com/zoro-005/NGO-website" class="portfolio-link" title="Source Code">💻</a>
+              <a href="https://ngo-website-production-ee78.up.railway.app/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/zoro-005/NGO-website" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
@@ -139,8 +130,8 @@
             <h4>Fitness Center</h4>
             <p>Modern fitness website built with Django framework and responsive design.</p>
             <div class="portfolio-links">
-              <a href="https://fitness-syntax-error.onrender.com/" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/zoro-005/django-fitness" class="portfolio-link" title="Source Code">💻</a>
+              <a href="https://fitness-syntax-error.onrender.com/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/zoro-005/django-fitness" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
@@ -160,20 +151,6 @@
         </div>
       </div>
 
-      <!-- <div class="portfolio-item">
-                <img src="images/HistoryWarriors.png" alt="History Warriors" class="portfolio-img">
-        <div class="portfolio-overlay">
-          <div class="portfolio-info">
-            <h4>History Warriors</h4>
-            <p>Educational history platform with interactive content and learning resources.</p>
-            <div class="portfolio-links">
-              <a href="https://history-warriors.onrender.com" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/amit-saini-21/history_warriors" class="portfolio-link" title="Source Code">💻</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="portfolio-item">
         <img src="images/amitPortfolio.png" alt="Portfolio Website" class="portfolio-img">
         <div class="portfolio-overlay">
@@ -181,8 +158,8 @@
             <h4>Developer Portfolio</h4>
             <p>Professional portfolio website showcasing skills and projects.</p>
             <div class="portfolio-links">
-              <a href="https://codewithsaini.onrender.com/" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/amit-saini-21/portfolio" class="portfolio-link" title="Source Code">💻</a>
+              <a href="https://codewithsaini.onrender.com/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/amit-saini-21/portfolio" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
@@ -195,15 +172,13 @@
             <h4>Creative Portfolio</h4>
             <p>Interactive portfolio with modern animations and creative design elements.</p>
             <div class="portfolio-links">
-              <a href="https://codewithtyagi.netlify.app/" class="portfolio-link" title="View Demo">🔗</a>
-              <a href="https://github.com/tyagigolu02/CodeWithTyagi.git" class="portfolio-link"
-                title="Source Code">💻</a>
+              <a href="https://codewithtyagi.netlify.app/" class="portfolio-link" title="View Demo" target="_blank" rel="noopener noreferrer">🔗</a>
+              <a href="https://github.com/tyagigolu02/CodeWithTyagi.git" class="portfolio-link" title="Source Code" target="_blank" rel="noopener noreferrer">💻</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Example placeholder for more projects -->
       <div class="portfolio-item portfolio-placeholder" style="padding: 1rem;">
         <span>More coming soon...</span>
       </div>
@@ -213,91 +188,35 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer mt-120">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <div class="logo-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="logos-text">
-            <span class="logo-text">Syntax
-              <span class="logo-accent">Error</span>
-            </span>
-          </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logos-text">
+                    <span class="logo-text">Syntax
+                        <span class="logo-accent">Error</span>
+                    </span>
+                </div>
+            </div>
+            <div class="footer-para">
+                <div>
+                    <p>
+                        Transforming ideas into exceptional digital
+                        experiences
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="footer-para">
-          <div>
+        <div class="footer-bottom">
             <p>
-              Transforming ideas into exceptional digital
-              experiences
+                &copy; 2023 SyntaxError Solutions. All rights reserved.
             </p>
-          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          &copy; 2023 SyntaxError Solutions. All rights reserved.
-        </p>
-      </div>
     </div>
-  </footer>
-  <!-- for chat us -->
-
-  <button id="chat-us-btn" aria-label="Chat with us">
-    <i class="fas fa-comments"></i>
-  </button>
-  <script>
-    // Chat Us Button Styles and Behavior
-    (function () {
-      var btn = document.createElement('style');
-      btn.innerHTML = `
-          #chat-us-btn {
-            position: fixed;
-            right: 32px;
-            bottom: 32px;
-            z-index: 1200;
-            background: linear-gradient(75deg, #764ba2, #667eea);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 0.9rem 2rem 0.9rem 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-          }
-          #chat-us-btn:hover {
-            background: linear-gradient(75deg, #9ea9d8, #b18fd4);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-          }
-          #chat-us-btn i {
-            font-size: 1.3rem;
-          }
-          @media (max-width: 600px) {
-            #chat-us-btn {
-              right: 12px;
-              bottom: 12px;
-              padding: 0.7rem 1.2rem 0.7rem 1rem;
-              font-size: 1rem;
-            }
-          }
-        `;
-      document.head.appendChild(btn);
-      var chatBtn = document.getElementById('chat-us-btn');
-      if (chatBtn) {
-        chatBtn.addEventListener('click', function () {
-          alert('Chat feature coming soon!');
-        });
-      }
-    })();
-  </script>
+</footer>
 </body>
 
 </html>

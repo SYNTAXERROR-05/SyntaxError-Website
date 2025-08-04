@@ -8,46 +8,43 @@
   <link rel="stylesheet" href="css/theme.css">
 
   <script src="js/theme.js" defer></script>
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body data-mode="light">
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <div class="logo-icon">
-          <i class="fas fa-code"></i>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="index.html#home" class="nav-link">Home</a></li>
-        <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li><a href="index.html#services" class="nav-link">Services</a></li>
-        <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
-        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="join-us.html" class="nav-link btn-quote active">Join Us</a></li>
-      </ul>
-      <div class="theme-toggle-fixed">
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun sun-icon"></i>
-          <i class="fas fa-moon moon-icon"></i>
-        </button>
-      </div>
-      <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="join-us.html" class="nav-link btn-quote active">Join Us</a></li>
+        </ul>
+        <div class="theme-toggle-fixed">
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </button>
+        </div>
     </div>
   </nav>
 
@@ -56,7 +53,7 @@
       <h2 class="section-title">Join Us</h2>
       <p class="section-subtitle">Become a part of the SyntaxError Solutions team! Fill out the form below to apply.</p>
     </div>
-    <form class="contact-form" id="joinUsForm" style="max-width:600px;margin:0 auto;">
+    <form class="contact-form" id="joinUsForm" style="max-width:800px; margin:0 auto;">
       <div class="form-row">
         <div class="form-group">
           <input type="text" id="firstName" name="firstName" required />
@@ -106,157 +103,36 @@
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer mt-120">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <div class="logo-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="logos-text">
-            <span class="logo-text">Syntax
-              <span class="logo-accent">Error</span>
-            </span>
-          </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logos-text">
+                    <span class="logo-text">Syntax
+                        <span class="logo-accent">Error</span>
+                    </span>
+                </div>
+            </div>
+            <div class="footer-para">
+                <div>
+                    <p>
+                        Transforming ideas into exceptional digital
+                        experiences
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="footer-para">
-          <div>
+        <div class="footer-bottom">
             <p>
-              Transforming ideas into exceptional digital
-              experiences
+                &copy; 2023 SyntaxError Solutions. All rights reserved.
             </p>
-          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          &copy; 2023 SyntaxError Solutions. All rights reserved.
-        </p>
-      </div>
     </div>
-  </footer>
-  <!-- for chat us -->
+</footer>
 
-  <button id="chat-us-btn" aria-label="Chat with us">
-    <i class="fas fa-comments"></i>
-  </button>
-  <script>
-    // Chat Us Button Styles and Behavior
-    (function () {
-      var btn = document.createElement('style');
-      btn.innerHTML = `
-          #chat-us-btn {
-            position: fixed;
-            right: 32px;
-            bottom: 32px;
-            z-index: 1200;
-            background: linear-gradient(75deg, #764ba2, #667eea);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 0.9rem 2rem 0.9rem 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-          }
-          #chat-us-btn:hover {
-            background: linear-gradient(75deg, #9ea9d8, #b18fd4);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-          }
-          #chat-us-btn i {
-            font-size: 1.3rem;
-          }
-          @media (max-width: 600px) {
-            #chat-us-btn {
-              right: 12px;
-              bottom: 12px;
-              padding: 0.7rem 1.2rem 0.7rem 1rem;
-              font-size: 1rem;
-            }
-          }
-        `;
-      document.head.appendChild(btn);
-      var chatBtn = document.getElementById('chat-us-btn');
-      if (chatBtn) {
-        chatBtn.addEventListener('click', function () {
-          alert('Chat feature coming soon!');
-        });
-      }
-    })();
-
-    // EmailJS Configuration
-    (function () {
-      emailjs.init("9xCXTsa_h1OoH3Ybx");
-    })();
-
-    // Form submission handler
-    document.getElementById('joinUsForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      const submitBtn = document.getElementById('submitBtn');
-      const btnText = document.getElementById('btnText');
-      const originalText = btnText.textContent;
-
-      // Show loading state
-      // btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      // submitBtn.disabled = true;
-
-      // Collect form data
-      const formData = {
-        firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        role: document.getElementById('role').value,
-        message: document.getElementById('message').value,
-        skills: document.getElementById('skills').value,
-        portfolio: document.getElementById('portfolio').value || 'Not provided',
-        submissionDate: new Date().toLocaleString(),
-        fullName: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value
-      };
-
-      // Send email using EmailJS
-      emailjs.send('service_tzz6e9j', 'template_oifvvoo', formData)
-        .then(function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-
-          // Show success message
-          btnText.innerHTML = '<i class="fas fa-check"></i> Application Sent!';
-          submitBtn.style.background = '#28a745';
-
-          // Reset form after delay
-          setTimeout(() => {
-            document.getElementById('joinUsForm').reset();
-            btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
-            submitBtn.disabled = false;
-            submitBtn.style.background = '';
-            alert('Thank you! Your application has been submitted successfully. We will contact you soon.');
-          }, 2000);
-
-        }, function (error) {
-          console.log('FAILED...', error);
-
-          // Show error message
-          btnText.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
-          submitBtn.style.background = '#dc3545';
-
-          setTimeout(() => {
-            btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
-            submitBtn.disabled = false;
-            submitBtn.style.background = '';
-          }, 3000);
-
-          alert('Sorry, there was an error sending your application. Please try again.');
-        });
-    });
-  </script>
 </body>
 
 </html>
