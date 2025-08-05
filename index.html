@@ -19,39 +19,37 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://syntaxerror-05.github.io/SyntaxError-Website/" />
 
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet" />
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/theme.css" />
 
-    <!-- JavaScript -->
     <script src="js/theme.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Animated Background -->
     <div class="bg-gradient"></div>
     <div class="bg-overlay"></div>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="index.html" class="nav-logo">
                 <div class="logo-icon">
                     <i class="fas fa-code"></i>
                 </div>
                 <span class="logo-text">Syntax<span class="logo-accent">Error</span></span>
-            </div>
+            </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -60,27 +58,15 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="join-us.html" class="nav-link btn-quote">Join Us</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="theme-toggle-fixed">
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
             </div>
-        </div>
-        <div class="theme-toggle-fixed">
-            <button id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-sun sun-icon"></i>
-                <i class="fas fa-moon moon-icon"></i>
-            </button>
-        </div>
-        <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -88,7 +74,7 @@
                     We Turn Ideas Into
                     <br /><br />
                     <span class="typed-text"></span>
-                    <span class="cursor">&nbsp;</span>
+                    <span class="cursor"></span>
                 </h1>
                 <p class="hero-subtitle">
                     Premium web development solutions that drive results. We
@@ -104,7 +90,6 @@
                     </a>
                 </div>
 
-                <!-- Stats -->
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number" data-target="63">0</span>
@@ -161,13 +146,11 @@
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -193,7 +176,6 @@
                         business growth.
                     </p>
 
-                    <!-- Key Features -->
                     <div class="features-grid">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
@@ -254,7 +236,6 @@
                         </div>
                     </div>
 
-                    <!-- Technologies -->
                     <div class="technologies">
                         <h5>Technologies We Use</h5>
                         <div class="tech-tags">
@@ -271,11 +252,6 @@
                             <span class="tech-tag">Wordpress</span>
                             <span class="tech-tag">Figma</span>
                             <span class="tech-tag">Flutter</span>
-                            <!-- <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">AWS</span> -->
                         </div>
                     </div>
                 </div>
@@ -283,7 +259,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -293,7 +268,7 @@
                     businesses
                 </p>
             </div>
-            <div class="services-grid" style="border-radius: 35px;">
+            <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
@@ -407,7 +382,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
@@ -417,7 +391,6 @@
                 </p>
             </div>
 
-            <!-- Portfolio Filter -->
             <div class="portfolio-filter">
                 <button class="filter-btn active" data-filter="all">
                     All Projects
@@ -435,91 +408,79 @@
 
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="images/ecomm.gif" alt="E-commerce Dashboard" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>E-commerce Dashboard</h4>
-                                <p>React • Node.js • MongoDB</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/ecomm.gif" alt="E-commerce Dashboard" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>E-commerce Dashboard</h4>
+                            <p>React • Node.js • MongoDB</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mobile">
-                    <div class="portfolio-image">
-                        <img src="images/mbank.jpg" alt="Mobile Banking App" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Mobile Banking App</h4>
-                                <p>React Native • Firebase</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/mbank.jpg" alt="Mobile Banking App" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>Mobile Banking App</h4>
+                            <p>React Native • Firebase</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="images/analydash.png" alt="Analytics Dashboard" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Analytics Dashboard</h4>
-                                <p>Vue.js • Python • PostgreSQL</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/analydash.png" alt="Analytics Dashboard" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>Analytics Dashboard</h4>
+                            <p>Vue.js • Python • PostgreSQL</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="ecommerce">
-                    <div class="portfolio-image">
-                        <img src="images/fashion.png" alt="Fashion E-store" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Fashion E-store</h4>
-                                <p>Shopify • React</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/fashion.png" alt="Fashion E-store" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>Fashion E-store</h4>
+                            <p>Shopify • React</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="images/LMS.jpg" alt="Learning Management System" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>Learning Management System</h4>
-                                <p>Angular • .NET • SQL Server</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/LMS.jpg" alt="Learning Management System" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>Learning Management System</h4>
+                            <p>Angular • .NET • SQL Server</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mobile">
-                    <div class="portfolio-image">
-                        <img src="images/healthcare.png" alt="HealthCare" class="portfolio-img" />
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h4>HealthCare</h4>
-                                <p>Flutter • Dart</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="View Demo">🔗</a>
-                                    <a href="#" class="portfolio-link" title="Source Code">💻</a>
-                                </div>
+                    <img src="images/healthcare.png" alt="HealthCare" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h4>HealthCare</h4>
+                            <p>Flutter • Dart</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" title="View Demo">🔗</a>
+                                <a href="#" class="portfolio-link" title="Source Code">💻</a>
                             </div>
                         </div>
                     </div>
@@ -531,7 +492,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -548,13 +508,13 @@
                         <div class="contact-details">
                             <h4>Email</h4>
                             <a href="mailto:syntax.error.adda@gmail.com" class="email-link">
-                                <p>syntax.error.adda@gmail.com</p>
+                                syntax.error.adda@gmail.com
                             </a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>
+                        <div class="contact-details">
                             <h4>Phone</h4>
                             <p>+91 8534892350</p>
                             <p>+91 9759570559</p>
@@ -562,30 +522,24 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
+                        <div class="contact-details">
                             <h4>Location</h4>
                             <p>Meerut, Uttar Pradesh, India</p>
                         </div>
                     </div>
                     <div class="contact-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14016.96496402413!2d77.6912996!3d28.9844611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c6e3e2e2e2e2e%3A0x2e2e2e2e2e2e2e2e!2sMeerut%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1687600000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.98392173405!2d77.64132782352127!3d28.99124433994943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c6475d4062a0b%3A0x852923fedf3d9953!2sMeerut%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1676295325985!5m2!1sen!2sin"
                             width="100%" height="250"
-                            style="border:0; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.10);"
+                            style="border:0;"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Meerut Location Map"></iframe>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/SYNTAXERROR-05" class="social-link"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/syntax-error%F0%9F%90%9E%F0%9F%90%9E-002772369/"
-                            class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <!-- <a href="#" class="social-link"><i class="fab fa-discord"></i></a> -->
-                        <a href="https://x.com/SyntaxAdda" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/syntax.error.official_05" class="social-link"><i
-                                class="fab fa-instagram"></i></a>
-                        <!-- <a href="#" class="social-link"><i class="fab fa-facebook"></i></a> -->
-                        <!-- <a href="#" class="social-link"><i class="fab fa-telegram"></i></a> -->
+                        <a href="https://github.com/SYNTAXERROR-05" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/syntax-error%F0%9F%90%9E%F0%9F%90%9E-002772369/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/SyntaxAdda" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/syntax.error.official_05" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -635,10 +589,10 @@
                         <label for="service">Service Interested In</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="10" required></textarea>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                         <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitContactBtn">
+                    <button type="submit" class="btn btn-primary" id="submitContactBtn" style="width:100%">
                         <i class="fas fa-paper-plane"></i><span id="contactBtnText">Send Message</span>
                     </button>
                 </form>
@@ -646,7 +600,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -676,193 +629,6 @@
             </div>
         </div>
     </footer>
-
-
-    <!-- for chat us -->
-
-    <button id="chat-us-btn" aria-label="Chat with us">
-        <i class="fas fa-comments"></i>
-    </button>
-    <script>
-        // Chat Us Button Styles and Behavior
-        (function () {
-            var btn = document.createElement('style');
-            btn.innerHTML = `
-          #chat-us-btn {
-            position: fixed;
-            right: 32px;
-            bottom: 32px;
-            z-index: 1200;
-            background: linear-gradient(75deg, #764ba2, #667eea);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 0.9rem 2rem 0.9rem 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-          }
-          #chat-us-btn:hover {
-            background: linear-gradient(75deg, #9ea9d8, #b18fd4);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-          }
-          #chat-us-btn i {
-            font-size: 1.3rem;
-          }
-          @media (max-width: 600px) {
-            #chat-us-btn {
-              right: 12px;
-              bottom: 12px;
-              padding: 0.7rem 1.2rem 0.7rem 1rem;
-              font-size: 1rem;
-            }
-          }
-        `;
-            document.head.appendChild(btn);
-            var chatBtn = document.getElementById('chat-us-btn');
-            if (chatBtn) {
-                chatBtn.addEventListener('click', function () {
-                    alert('Chat feature coming soon!');
-                });
-            }
-        })();
-    </script>
-
-    <script>
-        // EmailJS Configuration for Contact Form
-        (function () {
-            emailjs.init("9xCXTsa_h1OoH3Ybx");
-        })();
-
-        // Contact Form Handler
-        document.addEventListener('DOMContentLoaded', function () {
-            const contactForm = document.getElementById('contactForm');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-
-                    const submitBtn = document.getElementById('submitContactBtn');
-                    const btnText = document.getElementById('contactBtnText');
-
-                    if (!submitBtn || !btnText) {
-                        alert('Form elements not found. Please refresh the page.');
-                        return;
-                    }
-
-                    // Disable form to prevent multiple submissions
-                    //submitBtn.disabled = true;
-                    //btnText.innerHTML = ' Sending...';
-
-                    // Collect form data
-                    const formData = {
-                        firstName: document.getElementById('firstName').value.trim(),
-                        lastName: document.getElementById('lastName').value.trim() || 'Not provided',
-                        email: document.getElementById('email').value.trim(),
-                        phone: document.getElementById('phone').value.trim(),
-                        service: document.getElementById('service').value,
-                        message: document.getElementById('message').value.trim(),
-                        submissionDate: new Date().toLocaleString(),
-                        fullName: document.getElementById('firstName').value.trim() + ' ' + (document.getElementById('lastName').value.trim() || ''),
-                        priority: getPriority(document.getElementById('service').value),
-                        leadType: getLeadType(document.getElementById('service').value)
-                    };
-
-                    // Validate required fields
-                    if (!formData.firstName || !formData.email || !formData.phone || !formData.service || !formData.message) {
-                        resetContactButton();
-                        alert('Please fill in all required fields.');
-                        return;
-                    }
-
-                    // Validate email format
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(formData.email)) {
-                        resetContactButton();
-                        alert('Please enter a valid email address.');
-                        return;
-                    }
-
-                    console.log('Sending contact form data:', formData);
-
-                    // Function to reset button state
-                    function resetContactButton() {
-                        submitBtn.disabled = false;
-                        btnText.innerHTML = ' Send Message';
-                        submitBtn.style.background = '';
-                    }
-
-                    // Send email using EmailJS
-                    emailjs.send('service_q509l0l', 'template_32eigxj', formData)
-                        .then(function (response) {
-                            console.log('SUCCESS!', response.status, response.text);
-
-                            // Show success message
-                            btnText.innerHTML = ' ✅ Message Sent!';
-                            submitBtn.style.background = '#28a745';
-
-                            // Reset form and button after delay
-                            setTimeout(() => {
-                                contactForm.reset();
-                                resetContactButton();
-                                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
-                            }, 2000);
-
-                        })
-                        .catch(function (error) {
-                            console.log('FAILED...', error);
-                            console.log('Error status:', error.status);
-                            console.log('Error text:', error.text);
-                            console.log('Full error object:', error);
-
-                            // Show error message
-                            btnText.innerHTML = ' ❌ Failed to Send';
-                            submitBtn.style.background = '#dc3545';
-
-                            // Reset button after delay
-                            setTimeout(() => {
-                                resetContactButton();
-                                let errorMsg = 'Sorry, there was an error sending your message. ';
-                                if (error.status === 422) {
-                                    errorMsg += 'Template configuration issue detected.';
-                                } else if (error.status === 400) {
-                                    errorMsg += 'Service configuration issue detected.';
-                                } else {
-                                    errorMsg += 'Please try again or contact us directly.';
-                                }
-                                alert(errorMsg);
-                            }, 3000);
-                        });
-                });
-            }
-        });
-
-        // Helper function to determine priority based on service
-        function getPriority(service) {
-            const highPriorityServices = ['ecommerce', 'consulting', 'backend-solutions'];
-            return highPriorityServices.includes(service) ? 'High' : 'Normal';
-        }
-
-        // Helper function to determine lead type based on service
-        function getLeadType(service) {
-            const leadTypes = {
-                'web-development': 'Web Development Lead',
-                'mobile-development': 'Mobile App Lead',
-                'ui-ux-design': 'Design Lead',
-                'backend-solutions': 'Technical Lead',
-                'ecommerce': 'E-commerce Lead',
-                'consulting': 'Business Lead',
-                'others': 'General Inquiry'
-            };
-            return leadTypes[service] || 'General Lead';
-        }
-    </script>
 </body>
 
 </html>
